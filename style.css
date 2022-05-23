@@ -1,0 +1,30 @@
+:root {
+  --primary-color: hsl(215, 51%, 70%);
+  --second-color: hsl(178, 100%, 50%);
+  --blue-mbg-: hsl(217, 54%, 11%);
+  --blue-cbg-: hsl(216, 50%, 16%);
+  --blue-line-: hsl(215, 32%, 27%)
+  --white-: hsl(0, 0%, 100%)
+  --fs-: 1.2rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
+  font-family: Outfit, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: var(--blue-mbg-);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue-cbg-);
+}
