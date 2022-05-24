@@ -5,14 +5,13 @@
   --blue-cbg-: hsl(216, 50%, 16%);
   --blue-line-: hsl(215, 32%, 27%);
   --white-: hsl(0, 0%, 100%);
-  --fs-: 1.2rem;
+  --fs-: clamp(1rem, 1.2vw + 0.5rem, 1.2rem);
 }
 
 body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  text-align: center;
   font-family: Outfit, Helvetica, sans-serif;
   box-sizing: border-box;
   background-color: var(--blue-mbg-);
@@ -21,12 +20,14 @@ body {
 p {
   color: var(--primary-color);
   margin: 0;
-  padding: 0;
+  padding: 10px 0 10px;
+  font-size: var(--fs-);
+  font-weight: 300;
 }
 
 h3 {
   color: var(--white-);
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
 }
 
@@ -39,11 +40,125 @@ span {
 img {
   width: 100%;
   height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .main-content {
   width: 360px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 10% auto 10%;
+  background-color: var(--blue-cbg-);
+  padding: 25px;
+  border-radius: 15px;
+  align-items: flex-start;
+}
+
+.img-container,
+.logo {
+  position: relative;
+  border-radius: 15px;
+}
+
+.img-container:hover {
+  background-color: var(--second-color);
+  opacity: 0.5;
+}
+
+.view-icon {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.logo:hover,
+.view-icon:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.duration {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.left img {
+  width: 15px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.left p {
+  color: var(--second-color);
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+.right img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.creator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 0.5px solid var(--blue-line-);
+  width: 100%;
+}
+
+.creator-img-container {
+  width: 50px;
+  border: 1px solid var(--white-);
+  border-radius: 50%;
+}
+
+.creator p {
+  padding-left: 20px;
+}
+
+.challenge {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.challenge a {
+  text-decoration: none;
+  color: yellow;
+}
+
+@media only screen and (max-width: 375px) {
+  .main-content {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+    background-color: var(--blue-cbg-);
+    padding: 25px;
+    border-radius: 15px;
+    align-items: flex-start;
+  }
+
+  .creator {
+    padding-top: 20px;
+  }
 }
