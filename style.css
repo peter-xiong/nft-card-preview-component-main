@@ -3,28 +3,47 @@
   --second-color: hsl(178, 100%, 50%);
   --blue-mbg-: hsl(217, 54%, 11%);
   --blue-cbg-: hsl(216, 50%, 16%);
-  --blue-line-: hsl(215, 32%, 27%)
-  --white-: hsl(0, 0%, 100%)
+  --blue-line-: hsl(215, 32%, 27%);
+  --white-: hsl(0, 0%, 100%);
   --fs-: 1.2rem;
 }
+
 body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
   text-align: center;
   font-family: Outfit, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: var(--blue-mbg-);
 }
 
-.container {
-  background-color: var(--blue-mbg-);
+p {
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: var(--white-);
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  color: var(--white-);
+  margin: 0;
+  padding: 0;
+}
+
+img {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 
 .main-content {
+  width: 360px;
   display: flex;
   flex-direction: column;
-  background-color: var(--blue-cbg-);
+  margin: 0 auto;
 }
