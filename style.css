@@ -25,6 +25,10 @@ p {
   font-weight: 300;
 }
 
+a {
+  text-decoration: none;
+}
+
 h3 {
   color: var(--white-);
   margin: 20px 0 0;
@@ -62,9 +66,20 @@ img {
   border-radius: 15px;
 }
 
-.img-container:hover > a:hover {
+.img-container:hover {
   background-color: var(--second-color);
+  border-radius: 15px;
+  transition: 0.9s;
+}
+
+.img-container:hover > .view-icon {
+  opacity: 1;
+  transition: 0.9s;
+}
+
+.logo:hover {
   opacity: 0.5;
+  transition: 0.9s;
 }
 
 .view-icon {
@@ -77,10 +92,16 @@ img {
   height: 50px;
 }
 
+#item-name:hover {
+  color: var(--second-color);
+  transition: 0.9s;
+}
+
 .duration {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
+  border-bottom: 0.5px solid var(--blue-line-);
 }
 
 .left {
@@ -116,7 +137,6 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-top: 0.5px solid var(--blue-line-);
   width: 100%;
 }
 
@@ -128,6 +148,11 @@ img {
 
 .creator p {
   padding-left: 20px;
+}
+
+#creator-name:hover {
+  color: var(--second-color);
+  transition: 0.9s;
 }
 
 .challenge {
@@ -150,9 +175,5 @@ img {
     padding: 25px;
     border-radius: 15px;
     align-items: flex-start;
-  }
-
-  .creator {
-    padding-top: 20px;
   }
 }
